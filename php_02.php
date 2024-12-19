@@ -7,17 +7,32 @@
     <body>
         <div class="container mt-5">
             <?php $myvar = 2;?>
-            <h1>สูตรคูณแม่ <?php echo $myvar;?></h1>
+            <h1>ตัวเลขคู่ 1 ถึง 100 </h1>
             
             <?php
-            for ($i=1; $i < 13 ; $i++) { 
-                $muti = $i * 2;
+            for ($i=1; $i < 101 ; $i++) { 
+                if ($i%2==0) {
+                
             ?>
             <div class="row">
-                <div class="h2 col text-end"> 2 x <?php echo $i?> = </div>
-                <div class="h2 col text-start"><?php echo $muti?></div>
+                <div class="h2 col text-start"> <?php echo $i?> </div>
             </div>
             <?php
+                }
+            }
+            ?>
+            <h1>ตัวเลขคี่ 1 ถึง 100 </h1>
+            <?php
+            for ($i=1; $i < 101 ; $i++) { 
+                if ($i%2!=0) {
+                
+            ?>
+            
+            <div class="row">
+                <div class="h2 col text-start"> <?php echo $i?> </div>
+            </div>
+            <?php
+                }
             }
             ?>
     </body>
