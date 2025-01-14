@@ -17,3 +17,7 @@ Route::get("/mycontroller/{id?}" ,
 
 Route::post('/mycontroller/{id?}' , 
     [MyController::class, 'myfunction']);
+
+Route::get('/form', [MyController::class,'func']);
+
+Route::POST("/form", [MyController::class,'assign']);
