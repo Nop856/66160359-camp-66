@@ -13,7 +13,7 @@ Route::get("/", function () {
 });
 Route::get("/login", [LoginController::class, 'index']);
 Route::get("/register", [RegisterController::class, 'index']);
-Route::get("/dashboard", [HomeController::class, 'index']);
+Route::get("/home", [HomeController::class, 'index']);
 
 Route::get("/500", [HomeController::class, 'error500']);
 Route::get("/404", [HomeController::class, 'error404']);
