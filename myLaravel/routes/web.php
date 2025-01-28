@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 
 Route::get("/mul", [MyController::class, 'myFunction']);
 Route::post("/mul", [MyController::class, 'assign']);
@@ -14,6 +15,7 @@ Route::get("/", function () {
 Route::get("/login", [LoginController::class, 'index']);
 Route::get("/register", [RegisterController::class, 'index']);
 Route::get("/home", [HomeController::class, 'index']);
+Route::post("/register", [RegisterController::class, 'create']);
 
 Route::get("/500", [HomeController::class, 'error500']);
 Route::get("/404", [HomeController::class, 'error404']);
