@@ -5,7 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Middleware\CheckLogin;
 Route::get("/mul", [MyController::class, 'myFunction']);
 Route::post("/mul", [MyController::class, 'assign']);
 Route::get("/", function () {
@@ -13,6 +13,7 @@ Route::get("/", function () {
     return redirect('login');
 });
 Route::get("/login", [LoginController::class, 'index']);
+Route::post("/login", [LoginController::class, 'index']);
 Route::get("/register", [RegisterController::class, 'index']);
 Route::get("/home", [HomeController::class, 'index']);
 Route::post("/register", [RegisterController::class, 'create']);
